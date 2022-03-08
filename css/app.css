@@ -1,0 +1,42 @@
+.welcome{
+    color: rgb(0, 0, 75);
+    text-align: center;
+    margin-top: 10%;
+}
+.nav-link:hover{
+    color: white !important;
+    background-color: rgb(0, 0, 75) !important;
+}
+ 
+.div-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+}
+.alta-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 400px;
+    box-shadow: 0px 0px 4px black;
+    padding: 20px;
+    margin-top: 10px;
+}
+.form-item{
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+    max-width: 500px;
+}
+form{
+    margin-bottom: 20px;
+}
+
+.items-div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
