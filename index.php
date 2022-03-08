@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstap-css/bootstrap.min.css">
     <link rel="stylesheet" href="css/app.css">
-    <script src="js/bootstrap-4.6.1-dist/js/bootstrap.bundle.min.js"></script>
-
+   
     <title>Inicio</title>
 </head>
 

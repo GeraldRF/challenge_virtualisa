@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstap-css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/app.css">
-    <script src="../js/bootstrap-4.6.1-dist/js/bootstrap.bundle.min.js"></script>
     <title>Alta de empleados</title>
 </head>
 
@@ -15,7 +14,7 @@
     <?php include "components/navbar.php" ?>
 
     <div class="div-form">
-    <?php session_start();
+        <?php session_start();
         if (isset($_SESSION['respuesta'])) {
             if ($_SESSION['respuesta']) { ?>
                 <div style="width: 100%; border-left:3px solid green; padding:20px; background-color:rgba(29, 175, 0, 0.357);">
@@ -87,7 +86,11 @@
                     </select>
                 </div>
             </div>
-            <input type="submit" class="btn btn-success" value="Dar de alta">
+            <div style="display: flex; flex-direction: row; gap:30px; width: 100%;justify-content: center;">
+                <input style="width: 130px;" type="submit" class="btn btn-success" value="Alta">
+                <a style="width: 130px;" href="/" class="btn btn-warning">Salir</a>
+            </div>
+
         </form>
     </div>
 </body>

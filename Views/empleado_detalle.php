@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstap-css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/app.css">
-    <script src="../js/bootstrap-4.6.1-dist/js/bootstrap.bundle.min.js"></script>
+    
     <title>Empleados_Detalle</title>
 </head>
 
@@ -65,33 +65,32 @@
                 $provinces = json_decode(file_get_contents($url), true); ?>
 
                 <?php
-
-                foreach ($empleados as $empleado) {
-                    if ($empleado['activo'] == "si") {
+                    foreach ($empleados as $empleado) {
+                        if ($empleado['activo'] == "si") {
                 ?>
-                        <tr>
-                            <td scope="row"><?php echo $empleado['IdLegajo']; ?></td>
-                            <td><?php echo $empleado['Apellido']; ?></td>
-                            <td><?php echo $empleado['Nombre']; ?></td>
-                            <td><?php echo $empleado['Direccion']; ?></td>
-                            <td><?php echo $empleado['Localidad']; ?></td>
-                            <td><?php echo $empleado['ID_TIPO_DOCUMENTO']; ?></td>
-                            <td><?php echo $empleado['ID_TIPO_DOCUMENTO'] == 1 ? "DNI" : "PASAPORTE"; ?></td>
-                            <td><?php echo $empleado['NroDocumento']; ?></td>
-                            <td><?php echo $empleado['CodigoPostal']; ?></td>
-                            <td><?php echo $empleado['ID_PROVINCIA']; ?></td>
-                            <td>
-                                <?php
-                                foreach ($provinces as $province) {
-                                    if ($province["id_provincia"] == $empleado['ID_PROVINCIA']) echo $province['provincia'];
-                                }
-                                ?>
-                            </td>
-                            <td><a style="width: 130px;" class="btn btn-danger" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/Controllers/EmpleadoController.php?idLegajo=<?php echo $empleado['IdLegajo']; ?>">Dar de baja</a></td>
-                        </tr>
+                            <tr>
+                                <td scope="row"><?php echo $empleado['IdLegajo']; ?></td>
+                                <td><?php echo $empleado['Apellido']; ?></td>
+                                <td><?php echo $empleado['Nombre']; ?></td>
+                                <td><?php echo $empleado['Direccion']; ?></td>
+                                <td><?php echo $empleado['Localidad']; ?></td>
+                                <td><?php echo $empleado['ID_TIPO_DOCUMENTO']; ?></td>
+                                <td><?php echo $empleado['ID_TIPO_DOCUMENTO'] == 1 ? "DNI" : "PASAPORTE"; ?></td>
+                                <td><?php echo $empleado['NroDocumento']; ?></td>
+                                <td><?php echo $empleado['CodigoPostal']; ?></td>
+                                <td><?php echo $empleado['ID_PROVINCIA']; ?></td>
+                                <td>
+                                    <?php
+                                    foreach ($provinces as $province) {
+                                        if ($province["id_provincia"] == $empleado['ID_PROVINCIA']) echo $province['provincia'];
+                                    }
+                                    ?>
+                                </td>
+                                <td><a style="width: 130px;" class="btn btn-danger" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/Controllers/EmpleadoController.php?idLegajo=<?php echo $empleado['IdLegajo']; ?>">Dar de baja</a></td>
+                            </tr>
                 <?php
+                        }
                     }
-                }
                 ?>
 
 
